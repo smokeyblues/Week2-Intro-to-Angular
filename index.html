@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="introToAngular" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+    <title>Intro to Angular</title>
+</head>
+<body ng-controller="introController as introCtrl">
+    <h1 ng-hide="!introCtrl.header">Hi this is random text</h1>
+    <button class="btn-primary" ng-click="introCtrl.btnClick()">Arrr!! Me Button!</button>
+    <ul ng-hide="!introCtrl.list">
+        <li>Item 1 in this unordered list</li>
+        <li>Item 2 in this unordered list</li>
+        <li>Item 3 in this unordered list</li>
+    </ul>
+    <button class="btn btn-default" ng-click="introCtrl.showList()">Show List</button>
+    
+</body>
+</html>
