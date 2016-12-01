@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="partII" lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.js"></script>
+    <script src="main.js"></script>
+    
+    <title>Part II</title>
+</head>
+<body ng-controller="partIIController as partIIctrl">
+    <div ng-repeat="section in partIIctrl.sections">
+        <h1>{{section.heading}}!</h1>
+        <a href="{{section.link}}" ng-click="partIIctrl.areYouSure(section.link, $index)" ng-if="section.showLink">Example</a>
+        <p ng-repeat="paragragh in section.content" 
+           ng-class="{
+                     mousedOver :hover
+                     }"
+           ng-mouseenter="hover = true"
+           ng-mouseleave="hover = false"> {{paragragh}} </p>
+    </div>
+</body>
+</html>
